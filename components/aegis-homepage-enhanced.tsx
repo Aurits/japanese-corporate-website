@@ -1,4 +1,5 @@
 "use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -295,30 +296,30 @@ export default function EnhancedAegisHomepage() {
 
             <div className="flex items-center space-x-6">
               {/* Language Toggle */}
-              <div className="flex items-center space-x-2 bg-slate-700 p-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-slate-700 p-2">
                 <button
                   onClick={() => setLanguage("jp")}
-                  className={`px-4 py-2 text-sm font-medium transition-colors rounded ${language === "jp" ? "bg-teal-600 text-white" : "text-gray-300 hover:text-white"
+                  className={`px-4 py-2 text-sm font-medium transition-colors ${language === "jp" ? "bg-teal-600 text-white" : "text-gray-300 hover:text-white"
                     }`}
                 >
                   JP
                 </button>
                 <button
                   onClick={() => setLanguage("en")}
-                  className={`px-4 py-2 text-sm font-medium transition-colors rounded ${language === "en" ? "bg-teal-600 text-white" : "text-gray-300 hover:text-white"
+                  className={`px-4 py-2 text-sm font-medium transition-colors ${language === "en" ? "bg-teal-600 text-white" : "text-gray-300 hover:text-white"
                     }`}
                 >
                   EN
                 </button>
               </div>
 
-              <div className="hidden md:flex items-center space-x-3 text-base bg-slate-700 px-4 py-2 rounded-lg">
-                <Phone className="w-5 h-5 text-teal-400" />
-                <span className="font-mono font-semibold">03-1234-5678</span>
+              <div className="hidden md:flex items-center space-x-3 text-lg bg-slate-700 px-6 py-3">
+                <Phone className="w-6 h-6 text-teal-400" />
+                <span className="font-mono font-semibold text-xl">03-1234-5678</span>
               </div>
 
               {/* Mobile Menu Button */}
-              <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden p-3 hover:bg-slate-700 rounded-lg">
+              <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden p-3 hover:bg-slate-700">
                 {mobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
               </button>
             </div>
@@ -1116,7 +1117,7 @@ export default function EnhancedAegisHomepage() {
                   <button
                     key={index}
                     onClick={() => setActiveService(index)}
-                    className={`w-3 h-3 rounded-full transition-colors duration-300 ${(activeService % 4) === index ? "bg-teal-600" : "bg-slate-300"
+                    className={`w-3 h-3 transition-colors duration-300 ${(activeService % 4) === index ? "bg-teal-600" : "bg-slate-300"
                       }`}
                   />
                 ))}
